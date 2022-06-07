@@ -3,8 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.6.0] - Major Release (Feature / Quality Update)
 
-### Note
+### Important Notes
 
+- If you are using Ubuntu 20.04 or 18.04 do not upgrade unless you have read the following information: [Insert link to docs]
 - Issues with Ubuntu and Netplan and additional ip addresses has been discovered if this is the case for your setup please check if netplan configuration is correct
 
 ### Breaking changes
