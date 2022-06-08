@@ -56,18 +56,18 @@ All notable changes to this project will be documented in this file.
 - Fixed multiple issues with improved Quick installer app for Wordpress (#2583)
 - Changes in upstream package caused phpMyAdmin Single Sign on feature to break (#2591)
 - Fixed issues with DNS cluster and the new API (#2587)
-- Fixed an issue where phpgadmin config files was not renamed to .inc for Apache2 setups (#2592)
+- Fixed an issue where PHPpgAdmin config files was not renamed to .inc for Apache2 setups (#2592)
 - Startup Fail2ban on boot for Ubuntu 22.04 (#2596 #2594)
 - Fixed issue with duplicate config value (#2640 @Kujoe and #2605 #2610 )
 - Fixed an issue with change password function for webmail clients
-- Fixed multiple issues with Quick install apps in general (#2444, 1092, #2638)
+- Fixed multiple issues with Quick install apps in general (#2444, #1092, #2638)
 - Fixed an issue with memory usage graph and non english locale (#2643 #2540)
 - Fixed an issue with incorrect download path ftp backup (#2636 @cloudyhostcom)
 - Add php8.1 in v-run-cli-cmd (#2630 @gOOvER)
 - Fixed multiple issues with wildcard and Letsencrypt (#2627, #2626, #2624, #2623)
 - Fixed multiple issues in v-change-domain-owner (#2618, #2617, #1864)
 - Fixed an issue with MariadDB 10.8 detection (#2616)
-- Fixed an issue with netplan and additional ips (#2612)
+- Fixed an issue with netplan and additional ip addresses (#2612)
 
 ### Dependencies
 - Update hestia-nginx to 1.21.6
