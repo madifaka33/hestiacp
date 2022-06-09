@@ -5,16 +5,17 @@ All notable changes to this project will be documented in this file.
 
 ### Important Notes
 
-- If you are using Ubuntu 20.04 or 18.04 do not upgrade unless you have read the following information: [Insert link to docs]
-- Issues with Ubuntu and Netplan and additional ip addresses has been discovered if this is the case for your setup please check if netplan configuration is correct
+- Added support for Ubuntu 22.04 Jammy. If you planning to upgrade your server from Ubuntu 20.04 or 18.04 to Ubuntu 22.04 read the instruction carefully!
+- Issues with Ubuntu and Netplan and additional ip addresses has been discovered if this is the case for your setup please check if Netplan configuration is correct.
+- Due to know security issues with Rainloop [CVE-2022-29360](https://blog.sonarsource.com/rainloop-emails-at-risk-due-to-code-flaw/) and the lack of updates from there side we are planning to update / replace Rainloop with [Snappymail](https://github.com/the-djmaze/snappymail). How ever minor changes are needed to the release of Snappymail. The required changes have been made however we are waiting for for the final release of 2.16.4
+- Added support for Yescrypt and ARGON2ID for storing passwords of the users / email accounts password. If you encounter any issues (after importing a backup) with logging change the user / email account password and it will solve any issues. 
 
-### Breaking changes
+### Dropping support
+
 - Dropped support for Debian 9 for new installs (#2537)
-- Dropped support for RSSH for Debian 9 and Ubuntu 18.04 on install (#2537)
+- Dropped support for RSSH on Ubuntu 18.04 on install (#2537)
 - Dropped support for TLS1.1 and older for Dovecot (#2012 and #2538)
-- Added support for Yescrypt  (#2235 / #2499) Breaking possible restores from Debian 11 / Ubuntu 22.04 to older Operating version (Change user password to solve the issue)
-- Added support for ARGON2ID for mail accounts (#2421)  Breaking possible restores form Debian 10 and 11, Ubuntu 20.04 and 22.04 to Ubuntu 18.04 / Debian 9
-
+ 
 ### Features
 
 - Added support for Ubuntu 22.04 Jammy (#2537 #2489)
@@ -68,10 +69,13 @@ All notable changes to this project will be documented in this file.
 - Fixed multiple issues in v-change-domain-owner (#2618, #2617, #1864)
 - Fixed an issue with MariadDB 10.8 detection (#2616)
 - Fixed an issue with netplan and additional ip addresses (#2612)
+- Removed MariaDB repo form Ubuntu 22.04 install 
+- Don not install Roundcube dependencies if Roundcube is missing while installing sieve.
+- Remove duplicated code in v-add-web-domain-ssl
 
 ### Dependencies
-- Update hestia-nginx to 1.21.6
-    - Update openssl to 3.0.2
+- Update hestia-nginx to 1.22.0
+    - Update openssl to 3.0.3
     - Update zlib to 1.2.12
 - Update hestia-php to 8.1.5
 - Updated phpMyadmin to 5.2.0 (https://www.phpmyadmin.net/files/5.2.0/)
