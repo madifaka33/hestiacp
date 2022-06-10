@@ -75,10 +75,11 @@ All notable changes to this project will be documented in this file.
 
 ### Dependencies
 - Update hestia-nginx to 1.22.0
-    - Update openssl to 3.0.3
+    - Update OpenSSL to 3.0.3
     - Update zlib to 1.2.12
-- Update hestia-php to 8.1.5
-- Updated phpMyadmin to 5.2.0 (https://www.phpmyadmin.net/files/5.2.0/)
+    - Update PCRE to 10.40 
+- Update hestia-php to 8.1.7
+- Updated phpMyAdmin to 5.2.0 (https://www.phpmyadmin.net/files/5.2.0/)
 - Update Filegator to 7.8.1
 - Update composer dependencies
 
