@@ -88,3 +88,19 @@ if [ -n "$PHPMYADMIN_KEY" ]; then
     $BIN/v-delete-sys-pma-sso quiet
     $BIN/v-add-sys-pma-sso quiet
 fi
+
+#Fixed an issue with Exim4 and Ubutnu22.04 in beta version
+release=$(lsb_release -sr)
+if [ "$release" = "22.04" ]; then 
+    if [ -d "/etc/exim4/" ]; then
+        rm -fr /etc/exim4/exim.conf.template
+        cp -f $HESTIA_INSTALL_DIR/exim/exim4.conf.4.94.template /etc/exim4/exim4.conf.template 
+        if [ "$ANTIVIRUS_SYSTEM" = 'clamav-daemon' ]; then
+            sed -i "s/#SPAM/SPAM/g" /etc/exim4/exim4.conf.template
+        fi
+        if [ "$ANTISPAM_SYSTEM" = 'spamassassin' ]; then
+            sed -i "s/#CLAMD/CLAMD/g" /etc/exim4/exim4.conf.template
+        fi
+
+    fi
+fi
