@@ -14,8 +14,6 @@
 service=$1
 restart=$2
 
-echo $1 $2
-
 # Includes
 # shellcheck source=/etc/hestiacp/hestia.conf
 source /etc/hestiacp/hestia.conf
