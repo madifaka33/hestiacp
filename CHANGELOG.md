@@ -81,6 +81,7 @@ All notable changes to this project will be documented in this file.
 - Update hestia-php to 8.1.7
 - Updated phpMyAdmin to 5.2.0 (https://www.phpmyadmin.net/files/5.2.0/)
 - Update Filegator to 7.8.1
+- Update PHPmailer to 6.6.2
 - Update composer dependencies
 
 ## [1.5.15] - Service release
