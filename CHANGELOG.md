@@ -10,7 +10,7 @@ All notable changes to this project will be documented in this file.
 - Due to know security issues with Rainloop [CVE-2022-29360](https://blog.sonarsource.com/rainloop-emails-at-risk-due-to-code-flaw/) and the lack of updates from there side we are planning to update / replace Rainloop with [Snappymail](https://github.com/the-djmaze/snappymail). How ever minor changes are needed to the release of Snappymail. The required changes have been made however we are waiting for for the final release of 2.16.4
 - Added support for Yescrypt and ARGON2ID for storing passwords of the users / email accounts password. If you encounter any issues (after importing a backup) with logging change the user / email account password and it will solve any issues. 
 
-### Dropping support
+### Deprecated
 
 - Dropped support for Debian 9 for new installs (#2537)
 - Dropped support for RSSH on Ubuntu 18.04 on install (#2537)
